@@ -1,0 +1,125 @@
+// Peter bootstrap theme
+
+$yellow: #ffce4d;
+$green: #6dccaa;
+$brown: #ebcd9b;
+$mint: #c1e092;
+
+.jumbotron {
+    background-color: $green;
+}
+
+.stick-to-top {
+    background-color: white !important;
+}
+
+// Navbar Styling
+.navbar a {
+    font-weight: bold;
+}
+
+.social {
+    bottom: 0;
+
+    i {
+        font-size: 4rem;
+    }
+}
+
+section h2 {
+    position: relative;
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        border-bottom: 1px solid black;
+        width: 9%;
+        left: 0;
+        margin-bottom: 1.2rem;
+    }
+}
+
+.col-md-6.text-right {
+    h2 {
+        &:after {
+            right: 0;
+            left: unset;
+        }
+    }
+}
+
+section {
+    //border: 10px solid red;
+    &.yellow-background {
+        background-color: $yellow;
+    }
+    &.green-background {
+        background-color: $green;
+    }
+    &.brown-background {
+        background-color: $brown;
+    }
+    &.mint-background {
+        background-color: $mint;
+    }
+}
+
+.img-parallax {
+    object-fit: contain;
+}
+
+@mixin price() {
+    text-align: right;
+    float: right;
+    font-size: 23px;
+    font-weight: 700;
+    color: #f7c040;
+}
+
+.price-table table td:nth-child(2) {
+    @include price();
+}
+
+tr {
+    border-bottom: 2px dotted $yellow;
+}
+
+// styling buttons
+
+.btn-outline-dark:hover {
+    color: #fff;
+    background-color: $yellow;
+    border-color: $yellow;
+}
+
+a.google-maps-link {
+    background-color: #fafafa;
+    text-decoration: none;
+    transition: 1s ease all;
+    color: #333;
+    font-size: 1.5rem;
+    &:hover {
+        color: white;
+        background-color: $yellow;
+    }
+}
+
+ul.openingsuren {
+    //border: 1px solid red;
+    padding: 0;
+    li {
+        //border: 1px solid green;
+        display: flex;
+        span {
+            &:first-child {
+                //border: 2px dashed hotpink;
+                text-align: right;
+                padding-right: 1rem;
+                font-weight: 700;
+            }
+            flex: 0 0 50%;
+            //border: 1px solid blue;
+        }
+    }
+}
